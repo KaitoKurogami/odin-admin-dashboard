@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.svg-white{
+    color: white;
+    
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(min-content,1fr) 4fr;
     grid-template-areas: "navbar main";
 }
 
@@ -20,6 +28,9 @@ body {
 
 .sidebar{
     .title{
+        a svg{
+            margin-right: 15px;
+        }
         font-size: 32px;
         font-weight: bold;
     }
@@ -32,12 +43,21 @@ body {
         li{
             padding: 5px 0px;
             font-size: 18px;
+            a{
+                display: flex;
+                align-items: center;
+            }
         }
+    }
+
+    .submenu li a svg{
+        margin-left: 10px;
+        margin-right: 20px;
     }
     background-color: #1992d4;
     font-weight: bold;
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 15px;
     display: grid;
     grid-template-rows: fit-content(1ch) min-content auto ;
     gap: 30px;
@@ -65,6 +85,11 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 13px 0px;
+    align-items: center;
+}
+
+.searchbar{
+    display: flex;
     align-items: center;
 }
 
@@ -170,7 +195,6 @@ body {
     grid-template-columns: repeat(3, 50px);
     align-self:self-end;
     justify-self: end;
-    font-size: 28px;
     justify-items: center;
     padding-top: 5px;
     padding-right: 5px;
